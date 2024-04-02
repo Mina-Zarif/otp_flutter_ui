@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class OTPBuiltinKeyboard extends StatefulWidget {
   const OTPBuiltinKeyboard({super.key});
+
   @override
   State<OTPBuiltinKeyboard> createState() => _OTPBuiltinKeyboardState();
 }
@@ -178,17 +179,18 @@ class CustomOTPTextField extends StatelessWidget {
         height: 60,
         width: 60,
         alignment: Alignment.center,
+        padding: EdgeInsets.zero,
         decoration: BoxDecoration(
           border: Border.all(
-            color: value.isNotEmpty ? Colors.transparent : Colors.grey,
+            color: value.isEmpty ? Colors.transparent : Colors.grey.shade700,
           ),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(15),
         ),
         child: Text(
           value.isEmpty ? '*' : value,
           style: TextStyle(
             fontSize: 24,
-            color: value.isEmpty ? Colors.grey : Colors.black,
+            color: value.isEmpty ? Colors.grey.shade700 : Colors.black,
           ),
         ),
       ),

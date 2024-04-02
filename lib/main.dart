@@ -44,9 +44,7 @@ class HomeVeiw extends StatelessWidget {
               },
               child: const Text("OTP with builtin keyboard"),
             ),
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
